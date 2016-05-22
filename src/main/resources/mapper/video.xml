@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="Video">
+<mapper namespace="com.qingting.dao.VideoDao">
     <!--<select id="getUserById" parameterType="long" resultType="com.lvchuang.model.User">-->
         <!--select-->
           <!--id as id,-->
@@ -33,6 +33,11 @@
        <!--#{name},#{sex},#{stuNo},#{colleage},#{major},#{classname},#{dorNo},#{telephone},#{idNo},#{introducer},#{registDate},#{isXlStu},#{address}-->
        <!--)-->
     <!--</insert>-->
-
+    <select id="getCount" parameterType="com.qingting.model.Video" resultType="Integer">
+        SELECT
+          count(1)
+        FROM
+          video
+    </select>
 
 </mapper>
