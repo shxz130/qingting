@@ -17,6 +17,8 @@ public class Admin {
 
     private static String BASE_URL="video/";
 
+
+
     @RequestMapping(value = "init.shtml",method = { RequestMethod.POST, RequestMethod.GET })
     public String home(){
         return BASE_URL+"index";
